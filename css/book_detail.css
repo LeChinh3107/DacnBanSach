@@ -1,0 +1,91 @@
+/* Toàn bộ body của trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Màu nền sáng */
+}
+
+/* Toàn bộ container chứa thông tin chi tiết sách */
+.container {
+    width: 80%; /* Chiều rộng của container chiếm 80% chiều rộng màn hình */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    background-color: white; /* Nền trắng cho phần nội dung */
+    padding: 20px;
+    border-radius: 8px; /* Bo góc cho container */
+    margin: 20px auto; /* Tự động căn giữa theo chiều ngang và có khoảng cách ở trên và dưới */
+}
+
+/* Đảm bảo phần tử book-container và book-info chia 2 phần */
+.book-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Điều chỉnh cho ảnh sách */
+.book-image img {
+    width: 350px;
+    height: 400;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Thông tin sách */
+.book-info {
+    max-width: 600px;
+}
+
+.book-info h2 {
+    font-size: 22px; /* Tăng kích thước chữ cho các tiêu đề và mô tả */
+    line-height: 1.6;
+}
+
+/* Thêm một số padding và khoảng cách cho các đoạn văn */
+.book-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Điều chỉnh cho ảnh sách */
+.book-image {
+    text-align: center; /* Căn giữa ảnh */
+    display: flex;
+    flex-direction: column; /* Xếp ảnh và nút theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+.book-image img {
+    width: 450px;  /* Chiều rộng ảnh */
+    height: auto;  /* Tự động điều chỉnh chiều cao để giữ tỷ lệ ảnh */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart {
+    display: inline-block;
+    margin-top: 10px; /* Khoảng cách giữa ảnh và nút */
+    background-color: #0099FF; /* Màu nền nút */
+    color: white; /* Màu chữ */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ tay khi di chuột lên nút */
+    text-decoration: none; /* Bỏ gạch dưới */
+    text-align: center; /* Căn giữa chữ trong nút */
+}
+
+.add-to-cart a {
+    color: white;
+    text-decoration: none;
+}
+
+.add-to-cart:hover {
+    background-color: #218838; /* Màu nền khi hover */
+}
+

@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+}
+
+.books {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.book {
+    width: calc(20% - 16px); /* 5 sách mỗi hàng */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.book p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.book button {
+    background-color: #0099FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.book button:hover {
+    background-color: #218838;
+}
+
+/* Navigation buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button a {
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    color: inherit;        /* Sử dụng màu sắc của phần tử cha (button) */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+/* Phần chứa tất cả sách */
+.books-list-container {
+    max-width: 1150px; /* Giới hạn chiều rộng container giống như slideshow */
+    margin: 40px auto; /* Căn giữa và tạo khoảng cách phía trên */
+    padding: 0 20px; /* Tạo padding bên trái và phải */
+    position: relative; /* Để điều chỉnh các phần tử trong container */
+}
+
+/* Phần sách bên trong */
+.books-list {
+    display: flex; /* Hiển thị sách theo hàng ngang */
+    flex-wrap: wrap; /* Cho phép tự động xuống dòng khi không đủ sách */
+    gap: 10px; /* Khoảng cách giữa các sách */
+    justify-content: space-between; /* Dàn đều các sách */
+    margin-left: -20;
+    margin-right: -20;
+
+}
+
+/* Mỗi sách trong books-list sẽ chiếm 20% chiều rộng của container */
+.books-list .book {
+    width: calc(17% - 5px); /* Mỗi sách chiếm 20% chiều rộng của container, với khoảng cách gap */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Điều chỉnh kích thước ảnh cho phù hợp với chiều rộng */
+.books-list .book img {
+    width: 100%; /* Chiều rộng ảnh sẽ bằng với khung của sách */
+    height: auto; /* Chiều cao tự động theo tỷ lệ ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 8px;
+}
+
+.books-list .book h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #343a40;
+    font-weight: bold;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.books-list .book p {
+    font-size: 12px;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+.books-list .book button {
+    background-color: #0099FF;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.books-list .book button:hover {
+    background-color: #218838;
+}
+
+/* Thêm hiệu ứng hover */
+.books-list .book:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #343a40;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pagination span {
+    font-weight: bold;
+    background-color: #0099FF;
+    color: white;
+}
+
+
+/* CSS cho footer */
+#footer {
+    background-color: hsl(189, 53%, 56%);
+    padding: 20px 0;
+    margin-top: 20px;
+    
+}
+
+.footer-container {
+    display: flex; /* Hiển thị các div con theo hàng ngang */
+    justify-content: space-between; /* Đẩy hai div con ra hai bên */
+    align-items: flex-start; /* Canh trên cùng (nếu chiều cao khác nhau) */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa container */
+    padding: 0 20px; /* Tạo khoảng cách trong container */
+    text-align: center;
+
+}
+
+.person-info {
+    width: 45%; /* Mỗi người chiếm 45% chiều rộng */
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}

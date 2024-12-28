@@ -1,0 +1,190 @@
+/* CSS cho thanh điều hướng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.navbar .menu li {
+    display: inline;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .menu a:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.navbar .search-bar button {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #0099FF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar .search-bar button:hover {
+    background-color: #218838;
+}
+
+/* Icon giỏ hàng và user */
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-cart, .icon-user {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-cart img, .icon-user img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    line-height: 1;
+    text-align: center;
+    min-width: 18px;
+}
+
+/* Đảm bảo icon-user chứa dropdown */
+.icon-user {
+    position: relative; /* Gốc để dropdown xuất hiện */
+    display: inline-block;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 35px; /* Hiển thị dưới icon */
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Giữ dropdown hiển thị khi hover */
+.icon-user:hover .user-dropdown,
+.icon-user .user-dropdown:hover {
+    display: block;
+}
+
+.user-dropdown p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-dropdown a.logout-button {
+    display: block;
+    text-align: center;
+    background-color: #0099FF;
+    color: white;
+    padding: 5px 0;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.user-dropdown a.logout-button:hover {
+    background-color: #218838;
+}
+
+/* Dropdown menu */
+.navbar .menu .dropdown {
+    position: relative; /* Gốc cho dropdown */
+}
+
+.navbar .menu .dropdown a {
+    cursor: pointer;
+}
+
+.navbar .menu .dropdown-menu {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 100%; /* Hiển thị dưới menu cha */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.navbar .menu .dropdown-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar .menu .dropdown-menu a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Hiển thị dropdown khi hover */
+.navbar .menu .dropdown:hover .dropdown-menu {
+    display: block;
+}

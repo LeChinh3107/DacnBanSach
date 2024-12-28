@@ -1,0 +1,116 @@
+/* admin.css */
+* {
+    box-sizing: border-box; /* Đảm bảo kích thước bao gồm cả padding và border */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Các phần tử nằm ngang */
+    min-height: 100vh; /* Đảm bảo trang chiếm toàn bộ chiều cao màn hình */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: white; /* Đổi màu thanh sidebar thành trắng */
+    color: black;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #ddd; /* Thêm đường viền cho thanh bên trái */
+    z-index: 100; /* Đảm bảo sidebar luôn nằm trên phần nội dung */
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile .user-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    margin: 15px 0;
+}
+
+.sidebar .menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #f0f0f0; /* Thêm hiệu ứng hover */
+}
+
+.main-content {
+    margin-left: 250px; /* Đảm bảo nội dung chính không bị che bởi sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Làm cho nội dung chính chiếm phần còn lại của màn hình */
+    flex-grow: 1; /* Đảm bảo phần nội dung chính sẽ chiếm không gian còn lại */
+    position: relative; /* Đảm bảo không bị đè lên */
+}
+
+.main-content h1 {
+    color: #2c3e50;
+}
+
+/* Thêm CSS cho bảng */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Làm cho các đường viền bảng liền nhau */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Đường viền cho các ô trong bảng */
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4; /* Màu nền cho tiêu đề bảng */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền cho các dòng chẵn */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover lên dòng */
+}
+
+/* CSS cho các nút Sửa và Xóa */
+.button {
+    padding: 8px 16px; /* Khoảng cách xung quanh văn bản */
+    font-size: 14px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    background-color: #0099FF; /* Màu nền của nút */
+    border: none; /* Bỏ border mặc định */
+    border-radius: 4px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi hover vào nút */
+    text-decoration: none; /* Bỏ gạch chân nếu là link */
+    display: inline-block; /* Đảm bảo nút hiển thị theo dạng inline-block */
+    text-align: center; /* Canh giữa văn bản */
+}
+
+/* Khi hover vào nút */
+.button:hover {
+    background-color: #218838; /* Màu nền khi hover */
+}
+

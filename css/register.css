@@ -1,0 +1,79 @@
+/* Đặt kiểu chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Khung đăng ký */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Phần tiêu đề */
+h2 {
+    text-align: center;   /* Căn giữa chữ */
+    color: #343a40;
+    margin: 0 0 20px 0;    /* Cách phần trên form và dưới tiêu đề */
+    font-size: 24px;
+}
+
+/* Các label */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Các input text và password */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Nút đăng ký */
+button {
+    display: block;       /* Đảm bảo nút trở thành phần tử block */
+    width: auto;          /* Để chiều rộng của nút tự động theo nội dung */
+    padding: 12px 24px;   /* Cung cấp đủ không gian cho nút */
+    background-color: #09f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;   /* Căn giữa nội dung của nút */
+    margin-left: auto;    /* Đặt khoảng cách tự động bên trái */
+    margin-right: auto;   /* Đặt khoảng cách tự động bên phải */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
